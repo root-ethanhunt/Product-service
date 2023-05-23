@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce.product.productService.entity.ProductEntity;
+import com.ecommerce.product.productService.exception.ResourceNotFoundException;
 import com.ecommerce.product.productService.mapper.EntityMapper;
 import com.ecommerce.product.productService.mapper.ModelMapper;
 import com.ecommerce.product.productService.model.Product;
@@ -40,9 +41,10 @@ public class ProductServiceImpl implements ProductService {
 //	}
 
 	@Override
-    public Product create(Product product) {
-//        String productId = UUID.randomUUID().toString();
-//        product.setProductId(productId);
+    public Product create(Product product){
+//		if(product.getTitle()==null||product.getTitle().length()<0) {
+//			throw new ResourceNotFoundException("title should not be empty");
+//		}
 		ProductEntity pro = entityMapper.mapProductModelToEntity(product);
 		ProductEntity prod= productRepository.save(pro);
          Product p = modelMapper.mapProductEntityToMapper(prod);

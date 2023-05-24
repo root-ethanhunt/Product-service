@@ -1,6 +1,8 @@
 package com.ecommerce.product.productService.controller;
 
-import javax.validation.Valid;
+
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,7 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ecommerce.product.productService.constant.ProductConstants;
 import com.ecommerce.product.productService.model.Product;
 import com.ecommerce.product.productService.service.ProductService;
-import com.fasterxml.jackson.core.JsonProcessingException;
+
+import jakarta.validation.Valid;
+
+
 
 @CrossOrigin(origins = ProductConstants.CROSS_ORIGIN)
 @RestController
@@ -35,10 +40,15 @@ public class ProductController {
 
 
     @PostMapping
-    public ResponseEntity<Product> createProduct(@Valid @RequestBody Product product) {
+    public ResponseEntity<Product> createProduct(@Valid @RequestBody Product product){
         return ResponseEntity.status(HttpStatus.CREATED).body(productService.create(product));
     }
 
+    
+//    <dependency> 
+//    <groupId>org.springframework.boot</groupId> 
+//    <artifactId>spring-boot-starter-validation</artifactId> 
+//</dependency>
 
     //get single
 //    @PreAuthorize("hasAuthority('SCOPE_internal')")

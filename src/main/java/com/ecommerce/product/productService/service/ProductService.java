@@ -3,9 +3,6 @@
  */
 package com.ecommerce.product.productService.service;
 
-import java.util.List;
-
-import com.ecommerce.product.productService.exception.ResourceNotFoundException;
 import com.ecommerce.product.productService.model.Product;
 
 /**

@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce.product.productService.entity.ProductEntity;
-import com.ecommerce.product.productService.exception.ResourceNotFoundException;
 import com.ecommerce.product.productService.mapper.EntityMapper;
 import com.ecommerce.product.productService.mapper.ModelMapper;
 import com.ecommerce.product.productService.model.Product;

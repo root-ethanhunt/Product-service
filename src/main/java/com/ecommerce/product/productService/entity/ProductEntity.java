@@ -2,6 +2,7 @@ package com.ecommerce.product.productService.entity;
 
 import java.util.List;
 
+
 import org.hibernate.annotations.GenericGenerator;
 
 import com.ecommerce.product.productService.constant.ProductConstants;
